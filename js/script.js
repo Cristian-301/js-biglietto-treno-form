@@ -1,3 +1,4 @@
+var calcola = document.getElementById("calcola");
 
 calcola.addEventListener("click",
 function() {
@@ -25,16 +26,31 @@ function() {
   var prezzoScontatoOver = (costoBigliettoTotale - scontoOver);
   console.log("ScontoOver", scontoOver)
 
-
+  var messaggio = "";
   if (eta == "minorenne") {
+      messaggio = "Sconto minorenne"
+      var prezzoFinale = costoBigliettoTotale - scontoMinorenni;
+      console.log("Prezzo minorenni", costoBigliettoTotale - scontoMinorenni);
+    } else if (eta == "over65") {
+      messaggio = "Sconto over"
+      var prezzoFinale = costoBigliettoTotale - scontoOver;
+      console.log("Prezzo Over65", costoBigliettoTotale - scontoOver);
+    } else {
+      messaggio = "Prezzo pieno"
+      var prezzoFinale = costoBigliettoTotale;
+      console.log("Prezzo normale", costoBigliettoTotale);
+    }
 
-    console.log("Prezzo minorenni", costoBigliettoTotale - scontoMinorenni);
-  } else if (eta == "over65") {
 
-    console.log("Prezzo Over65", costoBigliettoTotale - scontoOver);
-  } else {
-
-    console.log("Prezzo normale", costoBigliettoTotale);
+    document.getElementById("stampa_nome").innerHTML = nome;
+    document.getElementById("offerta").innerHTML = messaggio;
+    carrozza = Math.floor( Math.random() * 8) + 1;
+    document.getElementById("carrozza").innerHTML = carrozza;
+    codice = Math.floor( Math.random() * 10000) + 90000;
+    document.getElementById("codice").innerHTML = codice;
+    var prezzoFinale = prezzoFinale.toFixed(2);
+    document.getElementById("prezzo_finale").innerHTML = prezzoFinale;
   }
-  }
+
+
 );
