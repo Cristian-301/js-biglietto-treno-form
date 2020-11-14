@@ -3,38 +3,65 @@
   <head>
     <meta charset="utf-8">
     <title>Biglietto Treno</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&family=Xanh+Mono&display=swap" rel="stylesheet">
   </head>
   <body>
+  <div id="contenitore">
+    <h1>Acquista biglietto</h1>
+    <div id="wrapper">
+      <div id="dati_passeggero">
+        <div class="info">
+          <p>Nome e Cognome</p>
+          <input id="nome" type="text" name="">
+        </div>
+        <div class="info">
+          <p>Kilometri da percorrere</p>
+          <input id="km" type="number" name="" value="">
+        </div>
+        <div class="info">
+          <p>Fascia d'età</p>
+          <select id="eta" name="">
+            <option value="minorenne">Minorenne</option>
+            <option value="magiorenne">Magiorenne</option>
+            <option value="over65">Over 65</option>
+          </select>
+        </div>
+        <div id="pulsanti">
+          <button id="calcola" type="button" name="button"> CALCOLA </button>
+          <button id="annulla" type="button" name="button"> ANNULLA </button>
+        </div>
+      </div>
+      <div id="biglietto_passeggero" class="hidden" >
+        <div id="opacita">
+          <div id="intestazione">
+            <h2>Biglietto</h2>
+            <img src="https://lh3.googleusercontent.com/proxy/buUsX9YUhc-xyP2i8r6oYCyGOUzAi2OxrQvL0I8EH_DFkvKKogISKB4NflxlL5m9C1_aNeJHbd3CAgbuV5RelJu95040VuIk0UQ4RXK3c6pBeRhwX9fJ5-Uj" alt="">
+          </div>
+          <div id="wrap-passeggero">
 
-  <h1>Calcolo prezzo biglietto</h1>
+            <table cellspacing="0" cellpadding="0" >
+              <tr>
+                <th>Passeggero</th>
+                <th>Offerta</th>
+                <th>Carrozza</th>
+                <th>Codice</th>
+                <th>Costo</th>
+              </tr>
+              <tr>
+                <td><p id="stampa_nome"></p></td>
+                <td><p id="offerta"></p></td>
+                <td><p id="carrozza"></p></td>
+                <td><p id="codice"></p></td>
+                <td><p id="prezzo_finale"></p></td>
+              </tr>
+            </table>
 
-  <div id="dati_passegero">
-    <p>Nome e Cognome</p>
-    <input id="nome" type="text" name="">
-    <p>Kilometri da percorrere</p>
-    <input id="km" type="number" name="" value="">
-    <p>Età</p>
-    <select id="eta" name="">
-      <option value="minorenne">Minorenne</option>
-      <option value="magiorenne">Magiorenne</option>
-      <option value="over65">Over 65</option>
-    </select> <br> <br>
-    <span id="calcola">calcola</span>
-    <span>anulla</span>
-  </div>
-
-  <div id="biglietto_passegero">
-    <h3>Nome Passeggero</h3>
-    <p id="stampa_nome"></p>
-    <br>
-    <h3>Offerta</h3>
-    <p id="offerta"></p>
-    <h3>Carrozza</h3>
-    <p id="carrozza"></p>
-    <h3>Codice</h3>
-    <p id="codice"></p>
-    <h3>Costo</h3>
-    <p id="prezzo_finale"></p>
+        </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="js/script.js" charset="utf-8"></script>

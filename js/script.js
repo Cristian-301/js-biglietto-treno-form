@@ -27,12 +27,12 @@ function() {
   console.log("ScontoOver", scontoOver)
 
   var messaggio = "";
-  if (eta == "minorenne") {
-      messaggio = "Sconto minorenne"
+    if (eta == "minorenne") {
+      messaggio = "Sconto" + "<br>" + "minorenne";
       var prezzoFinale = costoBigliettoTotale - scontoMinorenni;
       console.log("Prezzo minorenni", costoBigliettoTotale - scontoMinorenni);
     } else if (eta == "over65") {
-      messaggio = "Sconto over"
+      messaggio = "Sconto" + "<br>" + "Silver";
       var prezzoFinale = costoBigliettoTotale - scontoOver;
       console.log("Prezzo Over65", costoBigliettoTotale - scontoOver);
     } else {
@@ -48,9 +48,30 @@ function() {
     document.getElementById("carrozza").innerHTML = carrozza;
     codice = Math.floor( Math.random() * 10000) + 90000;
     document.getElementById("codice").innerHTML = codice;
-    var prezzoFinale = prezzoFinale.toFixed(2);
+    var prezzoFinale = prezzoFinale.toFixed(2) + "€" ;
     document.getElementById("prezzo_finale").innerHTML = prezzoFinale;
+
+    var bigliettoDiv = document.getElementById("biglietto_passeggero");
+    bigliettoDiv.className = "show";
   }
 
 
 );
+
+var annulla = document.getElementById("annulla");
+annulla.addEventListener("click",
+  function() {
+
+    var bigliettoDiv = document.getElementById("biglietto_passeggero");
+    bigliettoDiv.className = "hidden";
+    document.getElementById("nome").value = "";
+    document.getElementById("km").value = "";
+    document.getElementById("eta").value = "";
+    document.getElementById("stampa_nome").innerHTML ="";
+    document.getElementById("offerta").innerHTML ="";
+    document.getElementById("carrozza").innerHTML ="";
+    document.getElementById("codice").innerHTML ="";
+    document.getElementById("prezzo_finale").innerHTML ="";
+
+  }
+)

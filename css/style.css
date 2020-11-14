@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.show {
+  transition: 0.5s;
+  opacity: 1;
+}
+
+body {
+  height: 100vh;
+  background-image: url(../img/stazione.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+#contenitore {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(4, 139, 168, 0.5);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: white;
+  font-family: 'Goldman', cursive;
+}
+
+#wrapper {
+  width: 100%;
+  display: flex;
+  font-family: 'Xanh Mono', monospace;
+}
+
+#dati_passeggero {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 3px 7px black;
+  color: white;
+  background-color: #1a5b92;
+}
+#dati_passeggero p {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+input {
+  height: 25px;
+}
+
+#eta {
+  font-size: 1.1em;
+}
+
+#biglietto_passeggero {
+  width: 80%;
+  margin-left: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 3px 7px black;
+  color: black;
+  background-color: #fffff7;
+  background-image: url(../img/treno.png);
+  background-repeat: repeat;
+}
+
+#opacita {
+  background-color: rgba(255, 255, 255, 0.5)
+}
+
+#intestazione {
+  height: 40px;
+  border-bottom: 1px solid red;
+}
+
+#intestazione h2 {
+
+  float: left;
+}
+
+#intestazione img {
+  height: 30px;
+  margin-right: 10px;
+  float: right;
+}
+.info {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 4px 8px;
+  color: #03045e;
+}
+button:hover {
+  background-color: #048ba8;
+  color: white;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+
+}
+
+table {
+  width: 100% ;
+  background-color: rgba(253, 229, 194, 0.8);
+  border-radius: 5px;
+}
+
+table th {
+  padding: 10px;
+  text-align: left;
+  font-size: 1.5em;
+
+}
+table td {
+  height: 150px;
+  padding: 10px;
+  font-size: 22px;
+}
+
+table tr th:first-child {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.8em;
+  background-color: rgba(194, 138, 96, 0.5);
+}
+table tr td:first-child {
+  font-weight: bold;
+  background-color: rgba(194, 138, 96, 0.5);
+}
